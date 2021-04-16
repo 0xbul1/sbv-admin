@@ -1,15 +1,28 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import Layout from '@/layout/index.vue';
+// import Wrapper from '../views/Wrapper.vue';
 
 Vue.use(VueRouter);
-
+// /* Layout */
+// import Layout from '@/layout'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    component: Layout,
+    redirect: '/dashboard',
+    children: [{
+      path: 'dashboard',
+      name: 'Dashboard',
+      component: () => import('@/views/dashboard/index'),
+      meta: { title: 'Dashboard', icon: 'dashboard' },
+    }],
   },
+  // {
+  //   path: '/',
+  //   name: 'Wrapper',
+  //   component: Wrapper,
+  // },
   {
     path: '/about',
     name: 'About',
