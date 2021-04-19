@@ -5,9 +5,10 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
       <div class="sidebar-brand-icon rotate-n-15">
-        <i class="fas fa-laugh-wink"></i>
+<!--        <i class="fas fa-laugh-wink"></i>-->
+        <b-icon icon="emoji-laughing-fill"></b-icon>
       </div>
-      <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+      <div class="sidebar-brand-text mx-3">SBV Admin <sup>1</sup></div>
     </a>
 
     <!-- Divider -->
@@ -133,6 +134,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Sidebar',
 };
